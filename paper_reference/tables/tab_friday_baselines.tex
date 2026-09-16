@@ -1,0 +1,57 @@
+\begin{table}[!ht]
+\centering
+\caption{Fridays against the other weekdays.
+Left: AUC of logistic regression on the size statistics ($|V_n|$, $|E_n|$, average degree) alone and with one further group of features, in five folds formed by whole weeks and repeated twenty times.
+Right: AUC of each statistic used alone, in the orientation in which it exceeds $0.5$, with the $p$-value adjusted by the max-T procedure over the fifteen statistics above the last rule}
+\label{tab:friday_baselines}
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+%
+\begin{tabular}[t]{@{}l@{\hspace{12pt}}l@{}}
+%---------------- left panel ----------------
+\begin{tabular}[t]{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}r@{}}
+\toprule
+Features & AUC\\
+\midrule
+size statistics & 0.542\\
+$+$ Laplacian spectrum & 0.529\\
+$+$ degree histogram & 0.528\\
+$+$ clustering, triangles per edge & 0.539\\
+$+$ persistence entropy and quantiles & 0.550\\
+$+$ share of bypassed edges & 0.518\\
+$+$ e-mails per pair, single-e-mail pairs & 0.506\\
+$+$ all of the above & 0.511\\
+\midrule
+$+$ $\operatorname{TPD}_1$ & 0.615\\
+$+$ $n_{\text{shift}}$ & 0.618\\
+$+$ all of the above, $\operatorname{TPD}_1$, $n_{\text{shift}}$ & 0.550\\
+\bottomrule
+\end{tabular}
+&
+%---------------- right panel ----------------
+\begin{tabular}[t]{@{}>{\raggedright\arraybackslash}p{0.315\textwidth}rr@{}}
+\toprule
+Statistic & AUC & adj.\ $p$\\
+\midrule
+$|V_n|$ & 0.561 & 0.22\\
+$|E_n|$ & 0.556 & 0.32\\
+mean degree & 0.550 & 0.46\\
+$\operatorname{TP}(d_{\text{weight}})$ & 0.529 & 0.93\\
+$\operatorname{TPD}_1$ & 0.604 & 0.002\\
+$\operatorname{TPD}_2$ & 0.602 & 0.003\\
+$n_{\text{static}}$ & 0.532 & 0.88\\
+$n_{\text{shift}}$ & 0.605 & 0.002\\
+$n_{\text{new}}$ & 0.558 & 0.27\\
+average clustering & 0.520 & 0.99\\
+triangles per edge & 0.523 & 0.98\\
+persistence entropy & 0.553 & 0.37\\
+share of bypassed edges & 0.524 & 0.97\\
+e-mails per pair & 0.507 & 1.00\\
+single-e-mail pairs & 0.542 & 0.65\\
+\midrule
+$\operatorname{TPD}_1$ given $\log|V_n|$, $\log|E_n|$ & 0.618 & $<0.001$\\
+$n_{\text{shift}}$ given $\log|V_n|$, $\log|E_n|$ & 0.599 & 0.006\\
+\bottomrule
+\end{tabular}
+\end{tabular}
+\end{table}

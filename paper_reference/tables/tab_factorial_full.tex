@@ -1,0 +1,27 @@
+\begin{table}[!ht]
+\centering
+\caption{Weekend detection and the Friday task of \cref{app:exp-friday} with one factor of the construction changed at a time: AUC with $95\%$ intervals from resampling whole weeks, and Spearman correlation with $|V_n|$.
+The weekend AUC counts a lower score as a weekend, so a value below $0.5$ means a larger score on weekends; the Friday AUC takes, for each score, the orientation in which it exceeds $0.5$}
+\label{tab:factorial_full}
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Score & Weekend AUC & Friday AUC & Spearman with $|V_n|$\\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Consecutive snapshots, $W_2$ with the $\ell^2$ ground metric}}\\
+\quad windows $H_n$, weight $c$ (baseline) & 0.48 [0.43, 0.54] & -- & 0.25\\
+\quad windows $H_n$, weight $1/c$ & 0.33 [0.27, 0.39] & -- & $-0.13$\\
+\quad days $G_n$, weight $c$ & 0.62 [0.58, 0.66] & -- & 0.41\\
+\quad days $G_n$, weight $1/c$ & 0.61 [0.57, 0.65] & -- & 0.30\\
+\multicolumn{4}{@{}l}{\emph{Two distances on the same day, weight $1/c$}}\\
+\quad TPD & 0.92 [0.88, 0.95] & 0.60 & 0.87\\
+\quad $W_1$ & 0.92 [0.88, 0.95] & 0.61 & 0.87\\
+\quad $W_2$ & 0.92 [0.88, 0.95] & 0.61 & 0.84\\
+\multicolumn{4}{@{}l}{\emph{Two distances on the same day, weight $c$}}\\
+\quad TPD & 0.86 [0.83, 0.90] & 0.54 & 0.73\\
+\quad $W_1$ & 0.87 [0.83, 0.90] & 0.53 & 0.71\\
+\midrule
+$|V_n|$ alone & 0.97 [0.94, 0.99] & 0.56 & 1.00\\
+\bottomrule
+\end{tabular}
+\end{table}

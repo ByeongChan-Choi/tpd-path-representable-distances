@@ -1,0 +1,246 @@
+
+7.1  data and daily graphs
+  quantity                                                    paper       here
+  e-mails in the record                                      332334     332334   ok 
+  members of the institution                                    986        986   ok 
+  days covered by the record                                    804        804   ok 
+  days analysed                                                 525        525   ok 
+  days without any e-mail                                         7          7   ok 
+  median number of components                                    16         16   ok 
+  common birth edges over the 525 days                        17044      17044   ok 
+      births that differ 0, deaths that decrease 0, d_weight intervals without a d_edge interval 0
+
+7.2  the number: size and the Wasserstein distance
+  quantity                                                    paper       here
+  Spearman of TPD with |V_n|                                   0.87       0.87   ok 
+  Spearman of TPD with the average degree                      0.90       0.90   ok 
+  smallest partial correlation given |V_n| and degree         -0.17      -0.17   ok 
+  largest partial correlation given |V_n| and degree           0.15       0.15   ok 
+  days on which TPD vanishes                                    202        202   ok 
+  days with a positive TPD                                      323        323   ok 
+  Spearman with |V_n| on the days with a positive TPD          0.63       0.63   ok 
+  the same for the share s                                     0.28       0.27   ok 
+  median share s on those days                                0.037      0.037   ok 
+  Spearman of TPD with the same-day W_1                       0.996      0.996   ok 
+  weekend detection, AUC of |V_n| alone                        0.97       0.97   ok 
+
+7.3  the decomposition: metric-sensitive intervals
+  quantity                                                    paper       here
+  the low example day                                           106        106   ok 
+  its TPD                                                      0.02       0.02   ok 
+  the high example day                                          387        387   ok 
+  its TPD                                                      4.65       4.65   ok 
+  intervals of the 525 d_weight barcodes                      17044      17044   ok 
+  metric-sensitive intervals                                   2422       2422   ok 
+  their share, per cent                                        14.2       14.2   ok 
+  intervals only under d_edge                                   650        650   ok 
+  the same from the two ends of the chain                       650        650   ok 
+  their share of the d_edge barcodes, per cent                  3.7        3.7   ok 
+  median saturation value                                      0.40       0.40   ok 
+  a = alpha/(1-alpha) at the median                            0.67       0.67   ok 
+  largest saturation value                                     0.80       0.80   ok 
+  days with a metric-sensitive interval                         317        317   ok 
+  smallest eps/(1+eps) on those days                           0.25       0.25   ok 
+  largest eps/(1+eps) on those days                            0.82       0.82   ok 
+  d_weight intervals whose birth value is tied, per cent       98.9       98.9   ok 
+  birth edges kept under a random order, per cent              55.4       55.4   ok 
+  fewest metric-sensitive intervals over 100 orders            2413       2413   ok 
+  most metric-sensitive intervals over 100 orders              2436       2436   ok 
+  smallest share over the orders, per cent                     14.2       14.2   ok 
+  largest share over the orders, per cent                      14.3       14.3   ok 
+  smallest AUC of the boosted trees over the orders            0.86       0.86   ok 
+  largest AUC of the boosted trees over the orders             0.87       0.87   ok 
+  overall fraction metric-sensitive, per cent                  14.0       14.2   ok 
+  smallest decile fraction, per cent                            4.0        4.1   ok 
+  largest decile fraction, per cent                            65.0       64.9   ok 
+  AUC of the boosted trees, persistence alone                  0.83       0.83   ok 
+  AUC of the boosted trees, twelve attributes                  0.86       0.86   ok 
+  explained variance of the increase, per cent                  7.0        7.5   ok 
+
+7.4  how much the choice matters depends on the weights
+  quantity                                                    paper       here
+  values of lambda                                                5          5   ok 
+  shortest half-life, in days                                   0.6        0.6   ok 
+  longest half-life, in days                                    6.6        6.6   ok 
+  mean share s at lambda = 0                                  0.033      0.033   ok 
+  mean share s at lambda = 0.9                                0.135      0.135   ok 
+  metric-sensitive intervals at lambda = 0, per cent           14.0       14.2   ok 
+  metric-sensitive intervals at lambda = 0.9, per cent         44.0       44.4   ok 
+  tied births at lambda = 0, per cent                          98.9       98.9   ok 
+  tied births at lambda = 0.9, per cent                        17.8       17.8   ok 
+  birth edges kept at lambda = 0.9, per cent                   97.8       97.8   ok 
+  AUC of the screening rule at lambda = 0.9                    0.70       0.70   ok 
+  the same from the persistence alone                          0.52       0.52   ok 
+
+C.1  association with graph statistics (Table C1)
+  quantity                                                    paper       here
+  whole weeks in the 525 days                                    75         75   ok 
+  TPD against edge weight std.                                 0.53       0.53   ok 
+     partial given |V_n| and degree                            0.15       0.15   ok 
+     Wasserstein against edge weight std.                      0.21       0.21   ok 
+  TPD against density                                         -0.67      -0.67   ok 
+     partial given |V_n| and degree                           -0.17      -0.17   ok 
+     Wasserstein against density                              -0.15      -0.15   ok 
+  TPD against average degree                                   0.90       0.90   ok 
+     Wasserstein against average degree                        0.25       0.25   ok 
+  TPD against clustering coefficient                           0.73       0.73   ok 
+     partial given |V_n| and degree                           -0.13      -0.13   ok 
+     Wasserstein against clustering coefficient                0.24       0.24   ok 
+  TPD against |v_n|                                            0.87       0.87   ok 
+     Wasserstein against |v_n|                                 0.25       0.25   ok 
+  TPD against |e_n|                                            0.89       0.89   ok 
+     partial given |V_n| and degree                           -0.06      -0.06   ok 
+     Wasserstein against |e_n|                                 0.25       0.25   ok 
+  largest change on the 518 non-empty and the first 500 days    <=0.050      0.045   ok 
+  largest p-value of the week permutations                 <=0.0010     0.0002   ok 
+  strongest Wasserstein correlation, in absolute value       <=0.25       0.25   ok 
+  Spearman of the metric-sensitive fraction with |V_n|         0.27       0.27   ok 
+
+C.2  the Wasserstein baseline and weekend detection (Table C2)
+  quantity                                                    paper       here
+  weekend AUC, window graphs, weight c, W2                     0.48       0.48   ok 
+     Spearman with |V_n|                                       0.25       0.25   ok 
+  weekend AUC, window graphs, weight 1/c, W2                   0.33       0.33   ok 
+     Spearman with |V_n|                                      -0.13      -0.13   ok 
+  weekend AUC, day graphs, weight c, W2                        0.62       0.62   ok 
+     Spearman with |V_n|                                       0.41       0.41   ok 
+  weekend AUC, day graphs, weight 1/c, W2                      0.61       0.61   ok 
+     Spearman with |V_n|                                       0.30       0.30   ok 
+  weekend AUC, day graphs, weight 1/c, TPD1                    0.92       0.92   ok 
+     Friday AUC                                                0.60       0.60   ok 
+     Spearman with |V_n|                                       0.87       0.87   ok 
+  weekend AUC, day graphs, weight 1/c, W1                      0.92       0.92   ok 
+     Friday AUC                                                0.61       0.61   ok 
+     Spearman with |V_n|                                       0.87       0.87   ok 
+  weekend AUC, day graphs, weight 1/c, W2                      0.92       0.92   ok 
+     Friday AUC                                                0.61       0.61   ok 
+     Spearman with |V_n|                                       0.84       0.84   ok 
+  weekend AUC, day graphs, weight c, TPD1                      0.86       0.86   ok 
+     Friday AUC                                                0.54       0.54   ok 
+     Spearman with |V_n|                                       0.73       0.73   ok 
+  weekend AUC, day graphs, weight c, W1                        0.87       0.87   ok 
+     Friday AUC                                                0.53       0.53   ok 
+     Spearman with |V_n|                                       0.71       0.71   ok 
+  weekend AUC, |V_n| alone                                     0.97       0.97   ok 
+  Friday AUC, |V_n| alone                                      0.56       0.56   ok 
+  largest weekend AUC of the other consecutive-snapshot scores     <=0.65       0.64   ok 
+  smallest weekend AUC of the same-day comparisons             0.86       0.86   ok 
+  largest weekend AUC of the same-day comparisons              0.92       0.92   ok 
+  median W_1 / TPD on the days with a positive TPD             0.78       0.78   ok 
+      (common, births that differ, deaths that decrease, lost) under c (17727, 0, 0, 0), under 1/c (17044, 0, 0, 0)
+
+C.3  the chain d_alpha and metric sensitivity
+  quantity                                                    paper       here
+  new intervals along the chain                                 650        650   ok 
+  smallest alpha at which one appears                           0.1        0.1   ok 
+  largest alpha at which one appears                            0.7        0.7   ok 
+  the alpha at which most of them appear                        0.6        0.6   ok 
+  median eps/(1+eps)                                           0.74       0.74   ok 
+  saturation values above the grid value of the threshold          0          0   ok 
+  fewest metric-sensitive intervals over the five orders       2420       2420   ok 
+  most metric-sensitive intervals over the five orders         2429       2429   ok 
+  median saturation value under every order                    0.40       0.40   ok 
+  largest saturation value under every order                   0.80       0.80   ok 
+  days with a metric-sensitive interval                         317        317   ok 
+  smallest S/(1+S) on those days                              >0.97       0.97   ok 
+  AUC, persistence as a monotone score                         0.64       0.64   ok 
+  AUC, logistic regression, 12 attributes                      0.73       0.73   ok 
+  AUC, boosted trees, 12 attributes                            0.86       0.86   ok 
+  AUC, boosted trees, persistence alone                        0.83       0.83   ok 
+  AUC, boosted trees, without the detour                       0.83       0.83   ok 
+  AUC, boosted trees, interval and size only                   0.83       0.83   ok 
+  average precision of the boosted trees                       0.52       0.52   ok 
+  base rate                                                    0.14       0.14   ok 
+  median Jaccard of the birth edges under a random order       0.37       0.37   ok 
+  the same for the metric-sensitive intervals                  0.33       0.33   ok 
+  days on which n_shift changes with the order                  120        120   ok 
+  non-empty days                                                518        518   ok 
+  largest change of n_shift on a day                              4          4   ok 
+  smallest total of TPD_2 over the orders                     152.0      152.0   ok 
+  largest total of TPD_2 over the orders                      152.5      152.5   ok 
+  smallest AUC over the orders, logistic regression, 12 attributes      0.723      0.723   ok 
+  largest AUC over the orders, logistic regression, 12 attributes      0.738      0.738   ok 
+  smallest AUC over the orders, boosted trees, 12 attributes      0.859      0.859   ok 
+  largest AUC over the orders, boosted trees, 12 attributes      0.866      0.866   ok 
+  smallest AUC over the orders, boosted trees, persistence alone      0.829      0.829   ok 
+  largest AUC over the orders, boosted trees, persistence alone      0.832      0.832   ok 
+  smallest Friday AUC of n_shift and TPD_2 over the orders      0.600      0.600   ok 
+  largest Friday AUC of n_shift and TPD_2 over the orders      0.606      0.606   ok 
+  tied births at lambda = 0.5, per cent                        44.5       44.5   ok 
+  tied births at lambda = 0.9, per cent                        17.8       17.8   ok 
+  lambda = 0.5, smallest AUC, 12 attributes                   0.716      0.716   ok 
+  lambda = 0.5, largest AUC, 12 attributes                    0.719      0.719   ok 
+  lambda = 0.9, smallest AUC, 12 attributes                   0.703      0.703   ok 
+  lambda = 0.9, largest AUC, 12 attributes                    0.705      0.705   ok 
+  lambda = 0.5, smallest AUC, persistence alone               0.568      0.568   ok 
+  lambda = 0.5, largest AUC, persistence alone                0.569      0.569   ok 
+  lambda = 0.9, smallest AUC, persistence alone               0.521      0.521   ok 
+  lambda = 0.9, largest AUC, persistence alone                0.523      0.523   ok 
+
+C.4  a day-of-week analysis (Table C3)
+  quantity                                                    paper       here
+  weekdays with a non-empty graph                               372        372   ok 
+  Fridays                                                        75         75   ok 
+  other weekdays                                                297        297   ok 
+  within-week shortfall of |V_n|, per cent                      3.0        2.9   ok 
+  within-week shortfall of n_shift, per cent                   34.0       34.4   ok 
+  within-week shortfall of TPD_1, per cent                     39.0       38.6   ok 
+  metric-sensitive intervals per Friday                         4.8        4.8   ok 
+  the same on the lightest other weekday                        6.5        6.5   ok 
+  the same on the heaviest other weekday                        7.3        7.3   ok 
+  AUC with folds by week, size statistics only                0.542      0.542   ok 
+  AUC with folds by week, spectrum                            0.529      0.529   ok 
+  AUC with folds by week, degree histogram                    0.528      0.528   ok 
+  AUC with folds by week, clustering                          0.539      0.539   ok 
+  AUC with folds by week, barcode shape                       0.550      0.550   ok 
+  AUC with folds by week, bypassed edges                      0.518      0.518   ok 
+  AUC with folds by week, contact intensity                   0.506      0.506   ok 
+  AUC with folds by week, all descriptors                     0.511      0.511   ok 
+  AUC with folds by week, TPD_1                               0.615      0.615   ok 
+  AUC with folds by week, n_shift                             0.618      0.618   ok 
+  AUC with folds by week, all descriptors and TPD_1, n_shift      0.550      0.550   ok 
+  largest AUC of a group of standard descriptors            <=0.550      0.550   ok 
+  AUC alone, |V|                                              0.561      0.561   ok 
+     adjusted p, |V|                                          0.220      0.218   ok 
+  AUC alone, |E|                                              0.556      0.556   ok 
+     adjusted p, |E|                                          0.320      0.321   ok 
+  AUC alone, mean degree                                      0.550      0.550   ok 
+     adjusted p, mean degree                                  0.460      0.462   ok 
+  AUC alone, TP(d_weight)                                     0.529      0.529   ok 
+     adjusted p, TP(d_weight)                                 0.930      0.925   ok 
+  AUC alone, TPD_1                                            0.604      0.604   ok 
+     adjusted p, TPD_1                                        0.002      0.002   ok 
+  AUC alone, TPD_2                                            0.602      0.602   ok 
+     adjusted p, TPD_2                                        0.003      0.003   ok 
+  AUC alone, n_static                                         0.532      0.532   ok 
+     adjusted p, n_static                                     0.880      0.881   ok 
+  AUC alone, n_shift                                          0.605      0.605   ok 
+     adjusted p, n_shift                                      0.002      0.002   ok 
+  AUC alone, n_new                                            0.558      0.558   ok 
+     adjusted p, n_new                                        0.270      0.267   ok 
+  AUC alone, average clustering                               0.520      0.520   ok 
+     adjusted p, average clustering                           0.990      0.993   ok 
+  AUC alone, triangles per edge                               0.523      0.523   ok 
+     adjusted p, triangles per edge                           0.980      0.982   ok 
+  AUC alone, persistence entropy                              0.553      0.553   ok 
+     adjusted p, persistence entropy                          0.370      0.371   ok 
+  AUC alone, share of bypassed edges                          0.524      0.524   ok 
+     adjusted p, share of bypassed edges                      0.970      0.975   ok 
+  AUC alone, e-mails per pair                                 0.507      0.507   ok 
+     adjusted p, e-mails per pair                             1.000      1.000   ok 
+  AUC alone, share of single-e-mail pairs                     0.542      0.542   ok 
+     adjusted p, share of single-e-mail pairs                 0.650      0.649   ok 
+  AUC alone, TPD_1 given log |V|, log |E|                     0.618      0.618   ok 
+     adjusted p, TPD_1 given log |V|, log |E|              <=0.0010     0.0004   ok 
+  AUC alone, n_shift given log |V|, log |E|                   0.599      0.599   ok 
+     adjusted p, n_shift given log |V|, log |E|               0.006      0.006   ok 
+  largest AUC of a standard descriptor alone                 <=0.56       0.55   ok 
+
+C.5  recency-weighted contacts
+  quantity                                                    paper       here
+  smallest weekend AUC over lambda                             0.92       0.92   ok 
+  largest weekend AUC over lambda                              0.95       0.95   ok 
+  smallest lambda at which TP(d_weight) overtakes TPD_1 on Fridays        0.5        0.5   ok 
+      births that differ or deaths that decrease, all lambda: 0
+
+214 of 214 checks agree with the paper

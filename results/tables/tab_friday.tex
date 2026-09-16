@@ -1,0 +1,37 @@
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Features & folds by day & folds by week\\
+\midrule
+size statistics only & 0.533 & 0.542\\
+spectrum & 0.510 & 0.529\\
+degree histogram & 0.513 & 0.528\\
+clustering & 0.525 & 0.539\\
+barcode shape & 0.531 & 0.550\\
+bypassed edges & 0.513 & 0.518\\
+contact intensity & 0.500 & 0.506\\
+all descriptors & 0.491 & 0.511\\
+TPD_1 & 0.603 & 0.615\\
+n_shift & 0.604 & 0.618\\
+all descriptors and TPD_1, n_shift & 0.533 & 0.550\\
+\midrule
+Statistic alone & AUC & $p$ (max-T)\\
+\midrule
+|V| & 0.561 & 0.2180\\
+|E| & 0.556 & 0.3209\\
+mean degree & 0.550 & 0.4623\\
+TP(d_weight) & 0.529 & 0.9250\\
+TPD_1 & 0.604 & 0.0022\\
+n_static & 0.532 & 0.8806\\
+n_shift & 0.605 & 0.0022\\
+n_new & 0.558 & 0.2667\\
+TPD_2 & 0.602 & 0.0028\\
+average clustering & 0.520 & 0.9930\\
+triangles per edge & 0.523 & 0.9824\\
+persistence entropy & 0.553 & 0.3709\\
+share of bypassed edges & 0.524 & 0.9746\\
+e-mails per pair & 0.507 & 1.0000\\
+share of single-e-mail pairs & 0.542 & 0.6495\\
+TPD_1 given log |V|, log |E| & 0.618 & 0.0004\\
+n_shift given log |V|, log |E| & 0.599 & 0.0056\\
+\bottomrule
+\end{tabular}

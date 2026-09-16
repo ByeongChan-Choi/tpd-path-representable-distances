@@ -1,0 +1,18 @@
+\begin{tabular}{@{}llccc@{}}
+\toprule
+Comparison & Construction & Weekend AUC [95\%] & Friday AUC & Spearman with $|V_n|$\\
+\midrule
+consecutive snapshots & windows $H_n$, weight $c$ (baseline) & 0.48 [0.43, 0.54] & -- & 0.25\\
+ & windows $H_n$, weight $1/c$ & 0.33 [0.27, 0.39] & -- & -0.13\\
+ & days $G_n$, weight $c$ & 0.62 [0.58, 0.66] & -- & 0.41\\
+ & days $G_n$, weight $1/c$ & 0.61 [0.57, 0.65] & -- & 0.30\\
+\midrule
+two distances, same day & $\operatorname{TPD}_1$, weight $1/c$ & 0.92 [0.88, 0.95] & 0.60 & 0.87\\
+ & $W_1$, weight $1/c$ & 0.92 [0.88, 0.95] & 0.61 & 0.87\\
+ & $W_2$, weight $1/c$ & 0.92 [0.88, 0.95] & 0.61 & 0.84\\
+ & $\operatorname{TPD}_1$, weight $c$ & 0.86 [0.83, 0.90] & 0.54 & 0.73\\
+ & $W_1$, weight $c$ & 0.87 [0.83, 0.90] & 0.53 & 0.71\\
+\midrule
+size & $|V_n|$ alone & 0.97 [0.94, 0.99] & 0.56 & 1.00\\
+\bottomrule
+\end{tabular}

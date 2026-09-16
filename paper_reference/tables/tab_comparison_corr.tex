@@ -1,0 +1,23 @@
+\begin{table}[!ht]
+\centering
+\caption{Spearman correlations of TPD and of the Wasserstein measure with statistics of the daily graph $G_{n}$ over the $525$ days.
+Intervals are $95\%$ intervals from resampling whole weeks, and every correlation differs at $p<0.001$ from the null distribution of permutations of whole weeks}
+\label{tab:comparison_corr}
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & \multicolumn{2}{c}{TPD} & Wasserstein measure\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-4}
+Statistic of $G_n$ & Spearman & partial$^{b}$ & Spearman\\
+\midrule
+Edge weight std.\ or variance$^{a}$ & 0.53 [0.45, 0.61] & 0.15 & 0.21 [0.07, 0.34]\\
+Density & $-0.67$ [$-0.74$, $-0.59$] & $-0.17$ & $-0.15$ [$-0.25$, $-0.06$]\\
+Average degree & 0.90 [0.87, 0.91] & -- & 0.25 [0.14, 0.37]\\
+Avg.\ clustering coeff. & 0.73 [0.68, 0.78] & $-0.13$ & 0.24 [0.14, 0.35]\\
+$|V_n|$ & 0.87 [0.84, 0.89] & -- & 0.25 [0.14, 0.35]\\
+$|E_n|$ & 0.89 [0.87, 0.91] & $-0.06$ & 0.25 [0.14, 0.35]\\
+\bottomrule
+\end{tabular}
+\footnotetext[a]{The standard deviation and the variance of the edge weights have the same ranks.}
+\footnotetext[b]{Partial correlation given $|V_n|$ and the average degree.}
+\end{table}
